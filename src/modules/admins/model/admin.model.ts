@@ -8,30 +8,18 @@ export class AdminModel {
   @Field(() => String)
   mobileNumber: string;
 
-  @Field(() => String, { nullable: true })
-  FullName: string;
+  @Field(() => String)
+  status: string;
 
-  @Field(() => String, { nullable: true })
-  EmailAddress: string;
+  // @Field(() => GraphQLISODateTime)
+  // createdAt: Date;
 
-  @Field(() => String, { nullable: true })
-  Address: string;
+  // @Field(() => GraphQLISODateTime)
+  // updatedAt: Date;
 
-  @Field(() => String, { nullable: true })
-  Occupation: string;
+  @Field((type) => String)
+  createdAt: String;
 
-  @Field(() => String, { nullable: true })
-  MaritalStatus: string;
-
-  @Field(() => Int, { nullable: true })
-  PanCardNumber: number;
-
-  @Field(() => Int, { nullable: true })
-  AadharCardNumber: number;
-
-  @Field(() => GraphQLISODateTime)
-  createdAt: Date;
-
-  @Field(() => GraphQLISODateTime)
-  updatedAt: Date;
+  @Field((type) => String)
+  updatedAt: String;
 }

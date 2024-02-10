@@ -19,8 +19,8 @@ export class AdminsResolver {
 
   @UseGuards(JWTAuthGuard)
   @Query(() => AdminModel, { name: 'admin' })
-  findOne(@Args('id', { type: () => Int }) adminId: number) {
-    return this.adminsService.findOneById(adminId);
+  findOne(@Args('mobileNumber') mobileNumber: string) {
+    return this.adminsService.findOneById(mobileNumber);
   }
 
   @UseGuards(JWTAuthGuard)

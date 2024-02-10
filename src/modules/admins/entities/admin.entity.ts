@@ -8,26 +8,8 @@ export class Admin extends BaseEntity {
   @Column({ nullable: false, unique: true })
   mobileNumber: string;
 
-  @Column({ nullable: true })
-  FullName: string;
-
-  @Column({ nullable: true, unique: true })
-  EmailAddress: string;
-
-  @Column({ nullable: true })
-  Address: string;
-
-  @Column({ nullable: true })
-  Occupation: string;
-
-  @Column({ nullable: true })
-  MaritalStatus: string;
-
-  @Column({ nullable: true })
-  PanCardNumber: number;
-
-  @Column({ nullable: true })
-  AadharCardNumber: number;
+  @Column({ nullable: true, default: 'admin' })
+  status: string;
 
   @CreateDateColumn()
   createdAt: Date;

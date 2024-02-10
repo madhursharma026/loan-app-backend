@@ -11,6 +11,9 @@ export class User {
   @Column({ nullable: false, unique: true })
   mobileNumber: string;
 
+  @Column({ nullable: true, default: 'user' })
+  status: string;
+
   @OneToMany(() => LoanEntity, (loans) => loans.user)
   user_id: LoanEntity[];
 

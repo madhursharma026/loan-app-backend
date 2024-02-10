@@ -30,8 +30,9 @@ export class AdminsService {
     return this.adminRepo.findOne(options);
   }
 
-  findOneById(adminId: number) {
-    return this.adminRepo.findOneBy({ id: adminId });
+  async findOneById(mobileNumber) {
+    if (!mobileNumber) return null;
+    return this.adminRepo.findOneBy({ mobileNumber: mobileNumber });
   }
 
   async update(

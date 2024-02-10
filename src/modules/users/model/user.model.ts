@@ -8,10 +8,19 @@ export class UserModel {
   @Field(() => String)
   mobileNumber: string;
 
-  @Field(() => GraphQLISODateTime)
-  createdAt: Date;
+  @Field(() => String)
+  status: string;
 
-  @Field(() => GraphQLISODateTime)
-  updatedAt: Date;
+  // @Field(() => GraphQLISODateTime)
+  // createdAt: Date;
+
+  // @Field(() => GraphQLISODateTime)
+  // updatedAt: Date;
+
+  @Field((type) => String)
+  createdAt: String;
+
+  @Field((type) => String)
+  updatedAt: String;
 }
 
